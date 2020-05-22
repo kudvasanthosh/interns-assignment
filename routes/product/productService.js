@@ -89,7 +89,7 @@ async function update(id, productData) {
         Object.assign(product, productData);
 
         let productObj = await product.save();
-        // save product
+       
         if (!productObj) {
             return { "status": 400, "message": "failed to update product details" }
         } else {
