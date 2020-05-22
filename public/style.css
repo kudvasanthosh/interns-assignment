@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(224, 209, 67);
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 19px 0 0;
+    margin: 25px;
+    align-items: center;
+    background-color: rgb(38, 199, 17);
+}
