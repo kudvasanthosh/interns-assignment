@@ -36,8 +36,9 @@ async function getAll(queryParam, userId) {
         matchQuery.status = { $eq: queryParam.status }
     }
 
+   
 
-    let productItems = await Productdb.find(matchQuery).limit(numRecords).skip(parseInt(skip)).populate('productCategory')
+    let productItems = await Productdb.find(matchQuery).limit(numRecords).skip(parseInt(skip))
 
     if (!productItems) {
         return { "status": 400, "message": "failed to fetch product items" };
@@ -60,7 +61,6 @@ async function getById(id) {
         return { "status": 400, "message": e.message };
     }
 }
-
 async function create(productParam) {
     // validate
     if (await Productdb.findOne({ productName: productParam.productName })) {
