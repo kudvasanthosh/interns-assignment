@@ -25,7 +25,6 @@ app.get('/', (req, res) => {
 })
 
 app.use(bodyParser.json());
-app.use(express.static('public'));
 
 // initialize router
 app.use('/catapi', require('./routes/category/categoryController'));
