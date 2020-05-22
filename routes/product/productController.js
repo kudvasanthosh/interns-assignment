@@ -31,6 +31,7 @@ async function getAll(req, res) {
     }
 }
 
+// get product by id
 async function getByID(req, res) {
     if (!req.params.id) {
         res.status(400).send({ "message": " id param is missing" });

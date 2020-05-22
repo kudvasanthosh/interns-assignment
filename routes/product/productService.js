@@ -27,6 +27,7 @@ async function getAll(queryParam) {
 
     let skip = (page - 1) * numRecords;
 
+    // regex
     if (queryParam.productItem) {
         matchQuery.productItem = { $regex: queryParam.productItem, $options: "i" }
     }

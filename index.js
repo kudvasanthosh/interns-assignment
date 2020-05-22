@@ -30,7 +30,7 @@ app.use(bodyParser.json());
 app.use('/catapi', require('./routes/category/categoryController'));
 app.use('/proapi', require('./routes/product/productController'));
 
-// error handler
+// error handler code
 app.use(function(err, req, res, next) {
     res.send({ error: err.message });
 })

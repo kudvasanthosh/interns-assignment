@@ -22,6 +22,7 @@ function validateCategoryItem(categorydetails) {
 
 }
 
+// get all category
 async function getAll(req, res) {
     let response = await categoryService.getAll(req.query)
     if (response) {

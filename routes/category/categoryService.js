@@ -93,6 +93,7 @@ async function update(id, categoryItem) {
     }
 }
 
+// remove the category item
 async function removeItem(id) {
     try {
         let categoryObj = await Categorydb.findByIdAndRemove(id);
