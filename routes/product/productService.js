@@ -41,7 +41,7 @@ async function getAll(queryParam)
     }
 
 
-    let product= await Product.find(matchQuery).limit(numRecords).skip(parseInt(skip)).populate('productCategory').select({productName:1})
+    let product= await Product.find(matchQuery).limit(numRecords).skip(parseInt(skip)).populate('productCategory').select({productName:1,productPrice:1})
 
     if(!product){
         return{"status":400,"message":"failed to fetch category"} ;
